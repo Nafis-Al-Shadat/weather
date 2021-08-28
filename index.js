@@ -6,8 +6,8 @@ const loadData = (city = 'dhaka') =>{
         document.getElementById('warning').classList.remove('d-none');
         console.log(error)
     })
-}
-const displayData = weather =>{
+};
+const resetHTML = () =>{
     document.getElementById('city-name').innerHTML = '';
     document.getElementById('temp-main').innerHTML = '';
     document.getElementById('min-max').innerHTML = '';
@@ -15,6 +15,9 @@ const displayData = weather =>{
     document.getElementById('icon').setAttribute('src','');
     document.getElementById('wind').innerHTML = '';
     document.getElementById('sun').innerHTML = '';
+};
+const displayData = weather =>{
+    resetHTML();
     let sunrise = new Date(weather.sys.sunrise * 1000).toLocaleTimeString();
     let sunset = new Date(weather.sys.sunset*1000).toLocaleTimeString();
     const cityName = document.getElementById('city-name');
@@ -57,8 +60,7 @@ document.getElementById('input').addEventListener('keyup',function(e){
         const input = document.getElementById('input');
         if(input.value == '') return
         loadData(input.value);
-        input.value = '';
-        
+        input.value = ''; 
     }
     
 })
