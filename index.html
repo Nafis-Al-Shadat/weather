@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input type="text" autocomplete="off" class="form-control" id="input"placeholder="Enter a city Name for Weather ...">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-danger" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="weather-status text-white text-center">
+            <p id="warning" class="text-warning d-none">Check your internet connection or type the correct keyword</p>
+            <img id="icon"alt="">
+            <h1 id="city-name"></h1>
+            <h3><span id="temp-main"></span></h3>
+            <p id="min-max"></p>
+            <p id="sun"></p>
+            <p id="wind"></p>
+            <h3 id="status"></h3>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+
+</html>
